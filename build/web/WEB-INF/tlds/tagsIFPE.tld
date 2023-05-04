@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>tagsifpe</short-name>
+  <uri>tags</uri>
+  
+  <tag>
+      <name>Tag1</name>
+      <tag-class>tags.Tag1</tag-class>
+      <body-content>empty</body-content>
+  </tag>
+  
+  <tag>
+      <name>Tag2</name>
+      <tag-class>tags.Tag2</tag-class>
+      <body-content>scriptless</body-content>  
+  </tag>
+  
+  <tag>
+      <name>Tag3</name>
+      <tag-class>tags.Tag3</tag-class>
+      <body-content>empty</body-content>
+      
+      <attribute>
+          <name>attr1</name>
+          <type>String</type>
+          <required>false</required>
+      </attribute>
+      
+      <attribute>
+          <name>attr2</name>
+          <type>int</type>
+          <required>true</required>
+      </attribute>
+  </tag>
+</taglib>

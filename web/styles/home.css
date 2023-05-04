@@ -1,0 +1,33 @@
+.home-container {
+    background-color: #97c8eb;
+    
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 80%;
+    margin: 1.6rem;
+    
+    display: flex;
+}
+
+.box {
+    width: 16rem;
+    height: 7.25rem;
+    
+    margin: 1rem;
+    padding: 0.5rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-align: center;
+}
