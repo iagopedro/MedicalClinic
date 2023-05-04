@@ -23,31 +23,33 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container home-container">
-            <h1>Cadastrar médico</h1>
+            <h1>${requestScope.medico.crm ne null ? "Atualizar" : "Cadastrar" } médico</h1>
             
             <form action="MedicoServlet" method="post">
+                ${(requestScope.medico ne null)?'<input type="hidden" name="crm" value="'.concat(requestScope.medico.crm).concat('"/>'):''}
+                ${(requestScope.medico ne null)?'<input type="hidden" name="op" value="update"/>':''}
                 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="crm">CRM:</span>
-                    <input type="text" id="crm" name="crm" class="form-control" aria-label="Username" aria-describedby="crm">
+                    ${requestScope.medico ne null ? '<input type="text" id="crm" name="crm" class="form-control" aria-label="Username" aria-describedby="crm" value="'.concat(requestScope.medico.crm).concat('"/>') : '<input type="text" id="crm" name="crm" class="form-control" aria-label="Username" aria-describedby="crm"/>'}          
                 </div>
                 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="nome">Nome:</span>
-                    <input type="text" id="nome" name="nome" class="form-control" aria-label="Username" aria-describedby="nome">
+                    <input type="text" id="nome" name="nome" class="form-control" aria-label="Username" aria-describedby="nome" value="${requestScope.medico.nome ne null ? (requestScope.medico.nome) : ""}">
                 </div>
                 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="especialidade">Especialidade:</span>
-                    <input type="text" id="especialidade" name="especialidade" class="form-control" aria-label="Username" aria-describedby="especialidade">
+                    <input type="text" id="especialidade" name="especialidade" class="form-control" aria-label="Username" aria-describedby="especialidade" value="${requestScope.medico.especialidade ne null ? (requestScope.medico.especialidade) : ""}">
                 </div>
                 
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="contato">Contato:</span>
-                    <input type="text" id="contato" name="contato" class="form-control" aria-label="Username" aria-describedby="contato">
+                    <input type="text" id="contato" name="contato" class="form-control" aria-label="Username" aria-describedby="contato" value="${requestScope.medico.contato ne null ? (requestScope.medico.contato) : ""}">
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">${requestScope.medico.crm ne null ? "Atualizar" : "Cadastrar"}</button>
                 <button type="button" class="btn btn-light">
                     <a href="index.html">Voltar</a>
                 </button>

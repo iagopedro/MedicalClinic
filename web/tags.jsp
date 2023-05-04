@@ -15,8 +15,14 @@
     <body>
         <h1>Aprendendo Taglib!</h1>
         
+        <jsp:useBean id="medico" class="classes.Medico" scope="page" />
+        <jsp:setProperty name="medico" property="nome" value="iago"/>
+        
+        <tags:carregaMedico/>
+        ${pageScope.medicos.size()}
+        
         <tags:Tag1/>
         <tags:Tag2>Isso aqui vem da Tag2</tags:Tag2>
-        <tags:Tag3 attr1="teste1" attr2="2"/>
+        <tags:Tag3 attr1="teste1" attr2="2" attr3="${pageScope.medico}"/>
     </body>
 </html>

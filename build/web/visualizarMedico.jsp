@@ -25,8 +25,10 @@
             </tr>
             
             <tr>
-                <td>${requestScope.medico.CRM}</td>
+                <td>${requestScope.medico.crm}</td>
             </tr>
+            
+            <a href="MedicoServlet">Voltar</a>
         </table>
     </body>
 </html>

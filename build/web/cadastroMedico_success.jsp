@@ -20,6 +20,6 @@
         %>
         <h1>Médico <%= nome %> cadastrado com sucesso</h1>
         
-        <a href="index.html">Home</a>
+        <a href="medicos.jsp">Voltar para lista de médicos</a>
     </body>
 </html>

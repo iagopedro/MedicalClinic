@@ -32,5 +32,18 @@
           <type>int</type>
           <required>true</required>
       </attribute>
+      
+      <attribute>
+          <name>attr3</name>
+          <type>classes.Medico</type>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+  </tag>
+  
+  <tag>
+      <name>carregaMedico</name>
+      <body-content>empty</body-content>
+      <tag-class>classes.tags.TagCarregaMedicos</tag-class>
   </tag>
 </taglib>

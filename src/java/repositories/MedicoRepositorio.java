@@ -33,6 +33,7 @@ public class MedicoRepositorio {
     }
 
     public void create(Medico m) {
+        System.out.println("criar");
         this.medicos.add(m);
     }
 
@@ -46,6 +47,7 @@ public class MedicoRepositorio {
     }
 
     public void update(Medico m) {
+        System.out.println("oi");
         for (Medico aux : this.medicos) {
             if (aux.getCrm().equals(m.getCrm())) {
                 

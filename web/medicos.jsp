@@ -41,9 +41,9 @@
                 <td><%= m.getNome() %></td>
                 <td><%= m.getEspecialidade() %></td>
                 <td><%= m.getContato() %></td>
-                <td><a href="MedicoServlet?codigo=<%= m.getCrm() %>">Visualizar</a> 
-                    <a href="MedicoServlet?codigo=<%= m.getCrm() %>&op=update">Alterar</a> 
-                    <a href="MedicoServlet?codigo=<%= m.getCrm() %>&op=delete">Excluir</a></td>
+                <td><a href="MedicoServlet?crm=<%= m.getCrm() %>">Visualizar</a> 
+                    <a href="MedicoServlet?crm=<%= m.getCrm() %>&op=update">Alterar</a> 
+                    <a href="MedicoServlet?crm=<%= m.getCrm() %>&op=delete">Excluir</a></td>
             </tr>
         
         <% } %>
