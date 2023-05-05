@@ -45,9 +45,9 @@
                 <td><%= m.getTipoDosagem()%></td>
                 <td><%= m.getDescricao()%></td>
                 <td><%= m.getObservacao()%></td>
-                <td><a href="MedicamentoServlet?crm=<%= m.getCodigo() %>">Visualizar</a> 
-                    <a href="MedicamentoServlet?crm=<%= m.getCodigo() %>&op=update">Alterar</a> 
-                    <a href="MedicamentoServlet?crm=<%= m.getCodigo() %>&op=delete">Excluir</a></td>
+                <td><a href="MedicamentoServlet?codigo=<%= m.getCodigo() %>&op=read">Visualizar</a> 
+                    <a href="MedicamentoServlet?codigo=<%= m.getCodigo() %>&op=update">Alterar</a> 
+                    <a href="MedicamentoServlet?codigo=<%= m.getCodigo() %>&op=delete">Excluir</a></td>
             </tr>
         
         <% } %>

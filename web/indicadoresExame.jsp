@@ -40,12 +40,12 @@
             <tr>
                 <td><%= i.getCodigo() %></td>
                 <td><%= i.getIndicador() %></td>
-                <td><%= i.getDescricao()) %></td>
+                <td><%= i.getDescricao() %></td>
                 <td><%= i.getMinValorReferencia() %></td>
                 <td><%= i.getMaxValorReferencia() %></td>
-                <td><a href="MedicoServlet?crm=<%= i.getCrm() %>">Visualizar</a> 
-                    <a href="MedicoServlet?crm=<%= igetCrm() %>&op=update">Alterar</a> 
-                    <a href="MedicoServlet?crm=<%= i.getCrm() %>&op=delete">Excluir</a></td>
+                <td><a href="IndicadorExameServlet?codigo=<%= i.getCodigo() %>&op=read">Visualizar</a> 
+                    <a href="IndicadorExameServlet?codigo=<%= i.getCodigo() %>&op=update">Alterar</a> 
+                    <a href="IndicadorExameServlet?codigo=<%= i.getCodigo() %>&op=delete">Excluir</a></td>
             </tr>
         
         <% } %>

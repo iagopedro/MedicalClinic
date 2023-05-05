@@ -43,9 +43,9 @@
                 <td><%= p.getEndereco() %></td>
                 <td><%= p.getContato() %></td>
                 <td><%= p.getPlanoSaude() %></td>
-                <td><a href="PacienteServlet?crm=<%= p.getCpf() %>">Visualizar</a> 
-                    <a href="PacienteServlet?crm=<%= p.getCpf() %>&op=update">Alterar</a> 
-                    <a href="PacienteServlet?crm=<%= p.getCpf() %>&op=delete">Excluir</a></td>
+                <td><a href="PacienteServlet?cpf=<%= p.getCpf() %>">Visualizar</a> 
+                    <a href="PacienteServlet?cpf=<%= p.getCpf() %>&op=update">Alterar</a> 
+                    <a href="PacienteServlet?cpf=<%= p.getCpf() %>&op=delete">Excluir</a></td>
             </tr>
         
         <% } %>
