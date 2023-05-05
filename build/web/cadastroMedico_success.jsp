@@ -18,8 +18,9 @@
         <%
             String nome = (String) session.getAttribute("nome");
         %>
-        <h1>Médico <%= nome %> cadastrado com sucesso</h1>
+        <h1>Médico <%= nome %> cadastrado/atualizado com sucesso</h1>
         
-        <a href="medicos.jsp">Voltar para lista de médicos</a>
+        <a href="medicos.jsp">Ir para lista de médicos</a>
+        <a href="index.html">Voltar para página inicial</a>
     </body>
 </html>
