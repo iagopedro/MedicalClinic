@@ -42,7 +42,7 @@ public class MedicamentoServlet extends HttpServlet {
             
             getServletContext().getRequestDispatcher("/cadastroMedicamento.jsp").forward(request, response);
             
-        } else if (operacao.equals("read")) {
+        } else if (codigo != 0) {
             Medicamento m = MedicamentoRepositorio.getCurrentInstance().read(codigo);
 
             request.setAttribute("medicamento", m);
@@ -65,6 +65,7 @@ public class MedicamentoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         int codigo = Integer.parseInt(request.getParameter("codigo"));
         String nome = request.getParameter("nome");
         int dosagem = Integer.parseInt(request.getParameter("dosagem"));

@@ -43,7 +43,7 @@
                 <td><%= i.getDescricao() %></td>
                 <td><%= i.getMinValorReferencia() %></td>
                 <td><%= i.getMaxValorReferencia() %></td>
-                <td><a href="IndicadorExameServlet?codigo=<%= i.getCodigo() %>&op=read">Visualizar</a> 
+                <td><a href="IndicadorExameServlet?codigo=<%= i.getCodigo() %>">Visualizar</a> 
                     <a href="IndicadorExameServlet?codigo=<%= i.getCodigo() %>&op=update">Alterar</a> 
                     <a href="IndicadorExameServlet?codigo=<%= i.getCodigo() %>&op=delete">Excluir</a></td>
             </tr>

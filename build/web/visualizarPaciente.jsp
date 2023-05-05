@@ -26,11 +26,11 @@
             </tr>
             
             <tr>
-                <td>${requestScope.medico.cpf}</td>
-                <td>${requestScope.medico.nome}</td>
-                <td>${requestScope.medico.endereco}</td>
-                <td>${requestScope.medico.contato}</td>
-                <td>${requestScope.medico.planoSaude}</td>
+                <td>${requestScope.paciente.cpf}</td>
+                <td>${requestScope.paciente.nome}</td>
+                <td>${requestScope.paciente.endereco}</td>
+                <td>${requestScope.paciente.contato}</td>
+                <td>${requestScope.paciente.planoSaude}</td>
             </tr>
             
         </table>

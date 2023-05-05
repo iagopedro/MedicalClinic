@@ -33,7 +33,7 @@ public class IndicadorExameServlet extends HttpServlet {
         if (operacao != null && operacao.equals("delete")) {
             IndicadorExameRepositorio.getCurrentInstance().delete(codigo);
 
-            response.sendRedirect("deletarMedico_success.jsp");
+            response.sendRedirect("deletarIndicadorExame_success.jsp");
             
         } else if (operacao != null && operacao.equals("update")) {
             IndicadorExame i = IndicadorExameRepositorio.getCurrentInstance().read(codigo);
@@ -42,10 +42,9 @@ public class IndicadorExameServlet extends HttpServlet {
             
             getServletContext().getRequestDispatcher("/cadastroIndicadorExame.jsp").forward(request, response);
             
-        } else if (operacao.equals("read")) {
+        } else if (codigo != 0) {
             IndicadorExame i = IndicadorExameRepositorio.getCurrentInstance().read(codigo);
 
-            // trocar por scriptlet, pois não estou conseguindo exibir a página
             request.setAttribute("indicadorExame", i);
             
             getServletContext().getRequestDispatcher("/visualizarIndicadorExame.jsp").forward(request, response);

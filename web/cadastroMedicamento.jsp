@@ -25,7 +25,7 @@ and open the template in the editor.
         <div class="container home-container">
             <h1>${requestScope.medicamento.codigo ne null ? "Atualizar" : "Cadastrar" } medicamento</h1>
             
-            <form action="PacienteServlet" method="post">
+            <form action="MedicamentoServlet" method="post">
                 ${(requestScope.medicamento ne null)?'<input type="hidden" name="codigo" value="'.concat(requestScope.medicamento.codigo).concat('"/>'):''}
                 ${(requestScope.medicamento ne null)?'<input type="hidden" name="op" value="update"/>':''}
                 

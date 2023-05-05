@@ -42,10 +42,10 @@
                 <td><%= m.getCodigo() %></td>
                 <td><%= m.getNome() %></td>
                 <td><%= m.getDosagem() %></td>
-                <td><%= m.getTipoDosagem()%></td>
-                <td><%= m.getDescricao()%></td>
-                <td><%= m.getObservacao()%></td>
-                <td><a href="MedicamentoServlet?codigo=<%= m.getCodigo() %>&op=read">Visualizar</a> 
+                <td><%= m.getTipoDosagem() %></td>
+                <td><%= m.getDescricao() %></td>
+                <td><%= m.getObservacao() %></td>
+                <td><a href="MedicamentoServlet?codigo=<%= m.getCodigo() %>">Visualizar</a> 
                     <a href="MedicamentoServlet?codigo=<%= m.getCodigo() %>&op=update">Alterar</a> 
                     <a href="MedicamentoServlet?codigo=<%= m.getCodigo() %>&op=delete">Excluir</a></td>
             </tr>

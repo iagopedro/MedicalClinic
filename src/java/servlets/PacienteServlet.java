@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import repositories.PacienteRepositorio;
-import classes.Paciente
+import classes.Paciente;
 
 /**
  *
@@ -36,7 +36,7 @@ public class PacienteServlet extends HttpServlet {
             response.sendRedirect("deletarPaciente_success.jsp");
             
         } else if (operacao != null && operacao.equals("update")) {
-            Paciente m = PacienteRepositorio.getCurrentInstance().read(crm);
+            Paciente m = PacienteRepositorio.getCurrentInstance().read(cpf);
             
             request.setAttribute("paciente", m);
             
@@ -74,7 +74,7 @@ public class PacienteServlet extends HttpServlet {
 
         String operacao = request.getParameter("op");
 
-        Paciente p = new Medico();
+        Paciente p = new Paciente();
 
         p.setCpf(cpf);
         p.setNome(nome);
