@@ -9,7 +9,6 @@ import classes.Medico;
 import repositories.MedicoRepositorio;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -61,37 +60,6 @@ public class MedicoServlet extends HttpServlet {
             session.setAttribute("medicos", Medicos);
             
             response.sendRedirect("medicos.jsp");
-            
-            /*
-                try (PrintWriter out = response.getWriter()) {
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Medical Clinic</title>");
-                out.println("</head>");
-                out.println("<body>");
-                out.println("<h1>Medicos Cadastrados</h1>");
-                out.println("<table border='1'>");
-                out.println("<tr><th>Crm</th><th>Nome</th><th>Especialidade</th>"
-                        + "<th>Contato</th></tr>");
-
-                for(Medico m: Medicos) {
-                    out.println("<tr>");
-                    out.println("<td >" + m.getCrm() + "</td>");
-                    out.println("<td>" + m.getNome() + "</td>");
-                    out.println("<td>" + m.getEspecialidade() + "</td>");
-                    out.println("<td>" + m.getContato() + "</td>");
-                    out.println("<td><a href='MedicoServlet?crm="+ m.getCrm() + "'>read</a>" + " <a href= MedicoServlet?crm=" + m.getCrm() + "&op=update>update<a/>" + " <a href= MedicoServlet?crm=" + m.getCrm() + "&op=delete>delete</a></td>");
-                    out.println("</tr>");
-                }
-
-                out.println("</table>");
-                out.println("<a href=index.html>Home</a><br/>");
-                out.println("</body>");
-                out.println("</html>");
-            }
-            */
-          
         }
         
     }
@@ -122,26 +90,9 @@ public class MedicoServlet extends HttpServlet {
             MedicoRepositorio.getCurrentInstance().create(m);         
         }
         
-
         session.setAttribute("nome", m.getNome());
 
-        /*
-
-        out.println("<!DOCTYPE html>");
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<title>Medical Center</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h1>Médico " + m.getNome() + " cadastrado com sucesso!</h1>");
-        out.println("<a href=\"index.html\">Voltar a página inicial</a>");
-        out.println("</body>");
-        out.println("</html>");
-
-        */
-
         response.sendRedirect("cadastroMedico_success.jsp");
-
     }
 
     /**
